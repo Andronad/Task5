@@ -1,0 +1,11 @@
+<p>
+  Calculator in component
+</p>
+<input type="number" [(ngModel)]="a"/>
+<input type="number" [(ngModel)]="b"/>
+<div [ngClass]="{overSize:true}">
+  <div [ngClass]="{red:true}">sum={{serv.getSum(a,b)}}</div>
+  <div [ngStyle]="{'color':'blue'}">difference={{serv.getDif(a,b)}}</div>
+  <div>multiplication={{serv.getMult(a,b)}}</div>
+  <div *ngIf="b!=0&&b!=null">divide={{serv.getDiv(a,b)}}</div>
+</div>
